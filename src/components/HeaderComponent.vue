@@ -1,13 +1,13 @@
 <script setup></script>
 
 <template>
-  <div class="flex justify-between max-w-[1420px] w-full mx-auto items-center gap-x-25">
+  <div class="flex justify-between w-full items-center gap-x-25">
     <div>
       <img src="/images/logo.svg" alt="logo" />
     </div>
 
     <nav>
-      <ul class="flex gap-x-10">
+      <ul class="flex gap-x-10 rubik">
         <li>Услуги</li>
         <li>Материалы</li>
         <li>Доставка и оплата</li>
@@ -16,8 +16,14 @@
       </ul>
     </nav>
 
-    <div class="flex flex-grow justify-end">
+    <div class="flex justify-end rubik">
       <button class="py-2 px-7 bg-[#27AE60] rounded-md text-white">Заказать звонок</button>
     </div>
   </div>
 </template>
+
+<style scoped>
+.rubik {
+  font-family: Rubik, sans-serif;
+}
+</style>

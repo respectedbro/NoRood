@@ -130,22 +130,22 @@ import HeaderComponent from '@/components/HeaderComponent.vue'
 
         <div class="w-1/2 flex flex-col items-center">
           <div class="w-[318px] bg-[#27AE60] h-[57px]"></div>
-          <form class="flex flex-col px-11 pt-11 pb-8 bg-white gap-2">
+          <form class="flex flex-col px-11 pt-11 pb-8 bg-white gap-2 w-full rounded-xl">
             <input
-              class="border-solid border-1 border-slate-200 rounded"
+              class="border-solid border-1 border-slate-200 rounded py-6 pl-7"
               type="text"
               placeholder="Имя"
               name="firstname"
             />
             <input
-              class="border-solid border-1 border-slate-200 rounded"
+              class="border-solid border-1 border-slate-200 rounded py-6 pl-7"
               type="tel"
               placeholder="Телефон"
               name="phone"
             />
             <textarea
               placeholder="Комментарии"
-              class="border-solid border-1 border-slate-200 rounded"
+              class="border-solid border-1 border-slate-200 rounded pt-6 pl-7 min-h-[172px]"
               name="comment"
             ></textarea>
             <input type="checkbox" />

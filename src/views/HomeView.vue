@@ -1,11 +1,12 @@
 <script setup>
 import HeaderComponent from '@/components/HeaderComponent.vue'
+import FooterComponent from "@/components/FooterComponent.vue";
 </script>
 
 <template>
   <div class="home-view flex flex-col items-center max-w-[1920px] w-full">
     <div class="flex flex-col gap-90 max-w-[1420px] w-full">
-      <HeaderComponent />
+      <HeaderComponent/>
 
       <section class="flex flex-col items-start max-w-3xl text-white gap-y-12">
         <h1 class="rubik text-6xl font-bold font-mono">Продажа и доставка нерудных материалов</h1>
@@ -28,31 +29,31 @@ import HeaderComponent from '@/components/HeaderComponent.vue'
       <li
         class="items-center flex gap-6 border-gray-300 border-1 border-solid rounded-md pr-12 pl-5 w-full h-18"
       >
-        <img src="/images/icons/time-work.svg" alt="" />
+        <img src="/images/icons/time-work.svg" alt=""/>
         <p>Мы работаем с <span class="text-[#27AE60]">2000</span> года</p>
       </li>
       <li
         class="items-center flex gap-6 border-gray-300 border-1 border-solid rounded-md pr-12 pl-5 p-6 w-full h-18"
       >
-        <img src="/images/icons/clients.svg" alt="" />
+        <img src="/images/icons/clients.svg" alt=""/>
         <p>Более <span class="text-[#27AE60]">5000</span> счастливых клиентов</p>
       </li>
       <li
         class="items-center flex gap-6 border-gray-300 border-1 border-solid rounded-md pr-12 pl-5 p-6 w-full h-18"
       >
-        <img src="/images/icons/circle-clients.svg" alt="" />
+        <img src="/images/icons/circle-clients.svg" alt=""/>
         <p>Лучшие цены</p>
       </li>
       <li
         class="items-center flex gap-6 border-gray-300 border-1 border-solid rounded-md pr-12 pl-5 p-6 w-full h-18"
       >
-        <img src="/images/icons/star-products.svg" alt="" />
+        <img src="/images/icons/star-products.svg" alt=""/>
         <p>Качественная продукция</p>
       </li>
       <li
         class="items-center flex gap-6 border-gray-300 border-1 border-solid rounded-md pr-12 pl-5 p-6 w-full h-18"
       >
-        <img src="/images/icons/clock-operative.svg" alt="" />
+        <img src="/images/icons/clock-operative.svg" alt=""/>
         <p>Оперативность</p>
       </li>
     </ul>
@@ -84,7 +85,7 @@ import HeaderComponent from '@/components/HeaderComponent.vue'
 
   <section class="flex flex-col max-w-[1420px] w-full rubik">
     <div class="flex justify-between items-center">
-      <div class="w-1/2">
+      <div class="w-1/2 flex-col flex gap-8">
         <h3 class="text-5xl/[50px] tracking-tight font-medium">О компании СПЕЦ-ТРАНС</h3>
         <p class="max-w-[579px] text-lg font-normal text-[#67675F]">
           Наша фирма существует уже многие годы, заработав репутацию на рынке предлагаемых услуг как
@@ -99,7 +100,7 @@ import HeaderComponent from '@/components/HeaderComponent.vue'
       >
         <div class="w-1/2 flex flex-col items-center">
           <div class="text-[88px] font-light relative">
-            <img src="/images/icons/+.svg" alt="plus" class="absolute top-8 left-30" />
+            <img src="/images/icons/+.svg" alt="plus" class="absolute top-8 left-30"/>
             60
           </div>
           <p class="text-2xl font-normal text-slate-500 pl-6">Единиц техники</p>
@@ -114,7 +115,7 @@ import HeaderComponent from '@/components/HeaderComponent.vue'
 
   <section class="bg-[#F8F8F8] flex flex-col items-center max-w-[1920px] w-full">
     <div class="flex flex-col max-w-[1420px] w-full rubik">
-      <div class="flex justify-between">
+      <div class="flex justify-between items-center">
         <div class="flex flex-col gap-6 max-w-[489px]">
           <h3 class="text-5xl/[50px] tracking-tight font-medium">Остались вопросы?</h3>
           <p class="text-[28px] text-[#27AE60] font-light">
@@ -148,20 +149,82 @@ import HeaderComponent from '@/components/HeaderComponent.vue'
               class="border-solid border-1 border-slate-200 rounded pt-6 pl-7 min-h-[172px]"
               name="comment"
             ></textarea>
-            <input type="checkbox" />
-            <span>Соглашение о персональных данных</span>
+            <div class="flex gap-3 ml-1 mt-8">
+              <input type="checkbox"/>
+              <span>Соглашение о персональных данных</span>
+            </div>
+
           </form>
           <div class="w-[318px] bg-[#27AE60] h-[57px]"></div>
         </div>
       </div>
     </div>
   </section>
+
+  <section class="flex flex-col max-w-[1920px] w-full items-end">
+    <div class="flex max-w-[1670px] w-full rubik">
+      <div class="flex max-w-[670px] w-full flex-col justify-between gap-25">
+        <div class="flex  flex-col gap-12 ">
+          <h3 class="text-5xl/[50px] tracking-tight font-medium mt-10">Доставка</h3>
+          <p class="max-w-[500px] text-lg font-normal">Основная миссия компании Спец-транс —
+            комплексные поставки нерудных материалов для
+            корпоративных клиентов и частных лиц. Мы осуществлем доставку по Санкт-Петербургу и
+            Ленинградской области.
+          </p>
+
+          <ul class="flex flex-col gap-12 text-[#67675F]">
+            <li class="flex gap-4">
+              <img src="/images/icons/star-delivery.svg" alt="star-delivery">
+              <p>Вы оставляете заявку через сайт или по телефону</p>
+            </li>
+            <li class="flex gap-4">
+              <img src="/images/icons/star-delivery.svg" alt="star-delivery">
+              <p>Мы производим точный расчет стоимости</p>
+            </li>
+            <li class="flex gap-4">
+              <img src="/images/icons/star-delivery.svg" alt="star-delivery">
+              <p>Осуществляем поставку заказанного вами материала точно в срок</p>
+            </li>
+            <li class="flex gap-4">
+              <img src="/images/icons/star-delivery.svg" alt="star-delivery">
+              <p>Соблюдаем своевременный документооборот</p>
+            </li>
+          </ul>
+        </div>
+
+
+        <div class="flex gap-4 rubik font-normal">
+          <div class="flex flex-col p-13  text-center bg-[#F8F8F8] gap-3">
+            <span>г. Санкт-Петербург,</span>
+            <span class="text-base text-[#848692]">Невский проспект, д. 12/2</span>
+          </div>
+
+          <div class="flex flex-col px-11 py-13 text-center bg-[#F8F8F8] gap-3">
+            <span>+7 812 545 44 53</span>
+            <span class="text-base text-[#848692]">Ежедневно с 08:00 до 24:00</span>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="w-full wax-h-[980px]">
+        <iframe
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac15fcd3e256eec8e027b6c9698d1b1c0ef7c6b350fb078d5ecfe93d3f4e39d78&amp;source=constructor"
+          width="100%" height="100%"></iframe>
+      </div>
+
+    </div>
+
+  </section>
+
+  <FooterComponent/>
+
 </template>
 
 <style scoped>
 .home-view {
   background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.3)),
-    url('/images/mainImg.png');
+  url('/images/mainImg.png');
   background-size: cover; /* Масштабирует изображение, чтобы оно покрывало весь фон */
   background-position: center; /* Центрирует изображение */
   background-repeat: no-repeat; /* Предотвращает повторение изображения */

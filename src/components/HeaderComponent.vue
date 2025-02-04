@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <div class="flex justify-between w-full items-center gap-x-25">
+  <div class="flex justify-between w-full items-center gap-x-25 h-[100px]">
     <div>
       <img src="/images/logo.svg" alt="logo" />
     </div>

@@ -1,230 +1,230 @@
 <script setup>
 import HeaderComponent from '@/components/HeaderComponent.vue'
-import FooterComponent from "@/components/FooterComponent.vue";
+import FooterComponent from '@/components/FooterComponent.vue'
 </script>
 
 <template>
-  <div class="home-view flex flex-col items-center max-w-[1920px] w-full">
-    <div class="flex flex-col gap-90 max-w-[1420px] w-full">
-      <HeaderComponent/>
+  <div class="flex flex-col w-full items-center">
+    <div class="home-view px-3">
+      <div class="flex flex-col gap-90 max-w-[1420px] w-full justify-self-center">
+        <HeaderComponent />
 
-      <section class="flex flex-col items-start max-w-3xl text-white gap-y-12">
-        <h1 class="rubik text-6xl font-bold font-mono">Продажа и доставка нерудных материалов</h1>
+        <section class="flex flex-col items-start max-w-3xl text-white gap-y-12">
+          <h1 class="rubik text-6xl font-bold font-mono">Продажа и доставка нерудных материалов</h1>
 
-        <div class="rubik text-white-200 text-l font-normal">
-          <p>У нас вы можете заказать материалы премиального качества.</p>
-          <p>Индивидуальный подход и качественная продукция – ключевые преимущества</p>
-          <p>нашей компании.</p>
-        </div>
-
-        <button class="py-2 px-7 bg-[#27AE60] rounded-md text-white rubik">Заказать звонок</button>
-      </section>
-    </div>
-  </div>
-
-  <section class="flex flex-col max-w-[1420px] w-full rubik">
-    <h2 class="text-5xl/[50px] tracking-tight font-medium mt-20 mb-14">Почему выбирают нас</h2>
-
-    <ul class="flex items-center gap-2 text-sm rubik">
-      <li
-        class="items-center flex gap-6 border-gray-300 border-1 border-solid rounded-md pr-12 pl-5 w-full h-18"
-      >
-        <img src="/images/icons/time-work.svg" alt=""/>
-        <p>Мы работаем с <span class="text-[#27AE60]">2000</span> года</p>
-      </li>
-      <li
-        class="items-center flex gap-6 border-gray-300 border-1 border-solid rounded-md pr-12 pl-5 p-6 w-full h-18"
-      >
-        <img src="/images/icons/clients.svg" alt=""/>
-        <p>Более <span class="text-[#27AE60]">5000</span> счастливых клиентов</p>
-      </li>
-      <li
-        class="items-center flex gap-6 border-gray-300 border-1 border-solid rounded-md pr-12 pl-5 p-6 w-full h-18"
-      >
-        <img src="/images/icons/circle-clients.svg" alt=""/>
-        <p>Лучшие цены</p>
-      </li>
-      <li
-        class="items-center flex gap-6 border-gray-300 border-1 border-solid rounded-md pr-12 pl-5 p-6 w-full h-18"
-      >
-        <img src="/images/icons/star-products.svg" alt=""/>
-        <p>Качественная продукция</p>
-      </li>
-      <li
-        class="items-center flex gap-6 border-gray-300 border-1 border-solid rounded-md pr-12 pl-5 p-6 w-full h-18"
-      >
-        <img src="/images/icons/clock-operative.svg" alt=""/>
-        <p>Оперативность</p>
-      </li>
-    </ul>
-
-    <h3 class="text-5xl/[50px] tracking-tight font-medium mt-20 mb-14">Основные материалы</h3>
-    <div class="flex justify-between gap-1">
-      <div
-        class="text-white rubik text-4xl/[47px] font-bold cursor-pointer duration-500 ease-in-out transform hover:-translate-y-5"
-      >
-        <p class="sand w-[340px] h-[524px] flex items-end p-7">Песок</p>
-      </div>
-      <div
-        class="text-white rubik text-4xl/[47px] font-bold cursor-pointer duration-500 ease-in-out transform hover:-translate-y-5"
-      >
-        <p class="ballast w-[340px] h-[524px] flex items-end p-7">Щебень</p>
-      </div>
-      <div
-        class="text-white rubik text-4xl/[47px] font-bold cursor-pointer duration-500 ease-in-out transform hover:-translate-y-5"
-      >
-        <p class="asphalt w-[340px] h-[524px] flex items-end p-7">Асфальтная крошка</p>
-      </div>
-      <div
-        class="text-white rubik text-4xl/[47px] font-bold cursor-pointer duration-500 ease-in-out transform hover:-translate-y-5"
-      >
-        <p class="technique w-[340px] h-[524px] flex items-end p-7">Аренда техники</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="flex flex-col max-w-[1420px] w-full rubik">
-    <div class="flex justify-between items-center">
-      <div class="w-1/2 flex-col flex gap-8">
-        <h3 class="text-5xl/[50px] tracking-tight font-medium">О компании СПЕЦ-ТРАНС</h3>
-        <p class="max-w-[579px] text-lg font-normal text-[#67675F]">
-          Наша фирма существует уже многие годы, заработав репутацию на рынке предлагаемых услуг как
-          надежного и ответственного партнера. В число наших клиентов вошли крупнейшие организации.
-          При этом стоит отметить, что на индивидуальный подход при заказе наших услуг могут
-          рассчитывать как крупные компании, так и частные лица.
-        </p>
-      </div>
-
-      <div
-        class="flex justify-center items-center mb-20 pt-28 pb-36 pr-16 pl-20 w-1/2 mt-20 rounded-xl bg-[#F8F8F8]"
-      >
-        <div class="w-1/2 flex flex-col items-center">
-          <div class="text-[88px] font-light relative">
-            <img src="/images/icons/+.svg" alt="plus" class="absolute top-8 left-30"/>
-            60
+          <div class="rubik text-white-200 text-l font-normal">
+            <p>У нас вы можете заказать материалы премиального качества.</p>
+            <p>Индивидуальный подход и качественная продукция – ключевые преимущества</p>
+            <p>нашей компании.</p>
           </div>
-          <p class="text-2xl font-normal text-slate-500 pl-6">Единиц техники</p>
-        </div>
-        <div class="w-1/2 flex flex-col items-center">
-          <div class="text-[88px] font-light">15</div>
-          <p class="text-2xl font-normal text-slate-500">Карьеров</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <section class="bg-[#F8F8F8] flex flex-col items-center max-w-[1920px] w-full">
-    <div class="flex flex-col max-w-[1420px] w-full rubik">
-      <div class="flex justify-between items-center">
-        <div class="flex flex-col gap-6 max-w-[489px]">
-          <h3 class="text-5xl/[50px] tracking-tight font-medium">Остались вопросы?</h3>
-          <p class="text-[28px] text-[#27AE60] font-light">
-            Закажите обратный звонок и узнайте больше о наших услугах!
-          </p>
-          <p class="text-[22px] font-light">
-            Оставьте заявку и наш менеджер перезвонит вам в течении 10 минут
-          </p>
-          <button class="py-2 px-7 bg-[#27AE60] rounded-md text-white w-[254px] mt-8 rubik">
+          <button class="py-2 px-7 bg-[#27AE60] rounded-md text-white rubik">
             Заказать звонок
           </button>
+        </section>
+      </div>
+    </div>
+
+    <section class="flex flex-col max-w-[1420px] w-full rubik px-3">
+      <h2 class="text-5xl/[50px] tracking-tight font-medium mt-20 mb-14">Почему выбирают нас</h2>
+
+      <ul class="flex items-center gap-2 text-sm rubik">
+        <li
+          class="items-center flex gap-6 border-gray-300 border-1 border-solid rounded-md pr-12 pl-5 w-full h-18"
+        >
+          <img src="/images/icons/time-work.svg" alt="" />
+          <p>Мы работаем с <span class="text-[#27AE60]">2000</span> года</p>
+        </li>
+        <li
+          class="items-center flex gap-6 border-gray-300 border-1 border-solid rounded-md pr-12 pl-5 p-6 w-full h-18"
+        >
+          <img src="/images/icons/clients.svg" alt="" />
+          <p>Более <span class="text-[#27AE60]">5000</span> счастливых клиентов</p>
+        </li>
+        <li
+          class="items-center flex gap-6 border-gray-300 border-1 border-solid rounded-md pr-12 pl-5 p-6 w-full h-18"
+        >
+          <img src="/images/icons/circle-clients.svg" alt="" />
+          <p>Лучшие цены</p>
+        </li>
+        <li
+          class="items-center flex gap-6 border-gray-300 border-1 border-solid rounded-md pr-12 pl-5 p-6 w-full h-18"
+        >
+          <img src="/images/icons/star-products.svg" alt="" />
+          <p>Качественная продукция</p>
+        </li>
+        <li
+          class="items-center flex gap-6 border-gray-300 border-1 border-solid rounded-md pr-12 pl-5 p-6 w-full h-18"
+        >
+          <img src="/images/icons/clock-operative.svg" alt="" />
+          <p>Оперативность</p>
+        </li>
+      </ul>
+
+      <h3 class="text-5xl/[50px] tracking-tight font-medium mt-20 mb-14">Основные материалы</h3>
+      <div class="flex justify-between gap-1">
+        <div
+          class="text-white rubik text-4xl/[47px] font-bold cursor-pointer duration-500 ease-in-out transform hover:-translate-y-5"
+        >
+          <p class="sand w-[340px] h-[524px] flex items-end p-7">Песок</p>
+        </div>
+        <div
+          class="text-white rubik text-4xl/[47px] font-bold cursor-pointer duration-500 ease-in-out transform hover:-translate-y-5"
+        >
+          <p class="ballast w-[340px] h-[524px] flex items-end p-7">Щебень</p>
+        </div>
+        <div
+          class="text-white rubik text-4xl/[47px] font-bold cursor-pointer duration-500 ease-in-out transform hover:-translate-y-5"
+        >
+          <p class="asphalt w-[340px] h-[524px] flex items-end p-7">Асфальтная крошка</p>
+        </div>
+        <div
+          class="text-white rubik text-4xl/[47px] font-bold cursor-pointer duration-500 ease-in-out transform hover:-translate-y-5"
+        >
+          <p class="technique w-[340px] h-[524px] flex items-end p-7">Аренда техники</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="flex flex-col max-w-[1420px] w-full rubik px-3">
+      <div class="flex justify-between items-center">
+        <div class="w-1/2 flex-col flex gap-8">
+          <h3 class="text-5xl/[50px] tracking-tight font-medium">О компании СПЕЦ-ТРАНС</h3>
+          <p class="max-w-[579px] text-lg font-normal text-[#67675F]">
+            Наша фирма существует уже многие годы, заработав репутацию на рынке предлагаемых услуг
+            как надежного и ответственного партнера. В число наших клиентов вошли крупнейшие
+            организации. При этом стоит отметить, что на индивидуальный подход при заказе наших
+            услуг могут рассчитывать как крупные компании, так и частные лица.
+          </p>
         </div>
 
-        <div class="w-1/2 flex flex-col items-center">
-          <div class="w-[318px] bg-[#27AE60] h-[57px]"></div>
-          <form class="flex flex-col px-11 pt-11 pb-8 bg-white gap-2 w-full rounded-xl">
-            <input
-              class="border-solid border-1 border-slate-200 rounded py-6 pl-7"
-              type="text"
-              placeholder="Имя"
-              name="firstname"
-            />
-            <input
-              class="border-solid border-1 border-slate-200 rounded py-6 pl-7"
-              type="tel"
-              placeholder="Телефон"
-              name="phone"
-            />
-            <textarea
-              placeholder="Комментарии"
-              class="border-solid border-1 border-slate-200 rounded pt-6 pl-7 min-h-[172px]"
-              name="comment"
-            ></textarea>
-            <div class="flex gap-3 ml-1 mt-8">
-              <input type="checkbox"/>
-              <span>Соглашение о персональных данных</span>
+        <div
+          class="flex justify-center items-center mb-20 pt-28 pb-36 pr-16 pl-20 w-1/2 mt-20 rounded-xl bg-[#F8F8F8]"
+        >
+          <div class="w-1/2 flex flex-col items-center">
+            <div class="text-[88px] font-light relative">
+              <img src="/images/icons/+.svg" alt="plus" class="absolute top-8 left-30" />
+              60
+            </div>
+            <p class="text-2xl font-normal text-slate-500 pl-6">Единиц техники</p>
+          </div>
+          <div class="w-1/2 flex flex-col items-center">
+            <div class="text-[88px] font-light">15</div>
+            <p class="text-2xl font-normal text-slate-500">Карьеров</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-[#F8F8F8] flex flex-col items-center w-full px-3">
+      <div class="flex flex-col max-w-[1420px] w-full rubik">
+        <div class="flex justify-between items-center">
+          <div class="flex flex-col gap-6 max-w-[489px]">
+            <h3 class="text-5xl/[50px] tracking-tight font-medium">Остались вопросы?</h3>
+            <p class="text-[28px] text-[#27AE60] font-light">
+              Закажите обратный звонок и узнайте больше о наших услугах!
+            </p>
+            <p class="text-[22px] font-light">
+              Оставьте заявку и наш менеджер перезвонит вам в течении 10 минут
+            </p>
+            <button class="py-2 px-7 bg-[#27AE60] rounded-md text-white w-[254px] mt-8 rubik">
+              Заказать звонок
+            </button>
+          </div>
+
+          <div class="w-1/2 flex flex-col items-center">
+            <div class="w-[318px] bg-[#27AE60] h-[57px]"></div>
+            <form class="flex flex-col px-11 pt-11 pb-8 bg-white gap-2 w-full rounded-xl">
+              <input
+                class="border-solid border-1 border-slate-200 rounded py-6 pl-7"
+                type="text"
+                placeholder="Имя"
+                name="firstname"
+              />
+              <input
+                class="border-solid border-1 border-slate-200 rounded py-6 pl-7"
+                type="tel"
+                placeholder="Телефон"
+                name="phone"
+              />
+              <textarea
+                placeholder="Комментарии"
+                class="border-solid border-1 border-slate-200 rounded pt-6 pl-7 min-h-[172px]"
+                name="comment"
+              ></textarea>
+              <div class="flex gap-3 ml-1 mt-8">
+                <input type="checkbox" />
+                <span>Соглашение о персональных данных</span>
+              </div>
+            </form>
+            <div class="w-[318px] bg-[#27AE60] h-[57px]"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="flex flex-col w-full items-end pl-3">
+      <div class="flex max-w-[1670px] w-full rubik">
+        <div class="flex max-w-[670px] w-full flex-col justify-between gap-25">
+          <div class="flex flex-col gap-12">
+            <h3 class="text-5xl/[50px] tracking-tight font-medium mt-10">Доставка</h3>
+            <p class="max-w-[500px] text-lg font-normal">
+              Основная миссия компании Спец-транс — комплексные поставки нерудных материалов для
+              корпоративных клиентов и частных лиц. Мы осуществляем доставку по Санкт-Петербургу и
+              Ленинградской области.
+            </p>
+
+            <ul class="flex flex-col gap-12 text-[#67675F]">
+              <li class="flex gap-4">
+                <img src="/images/icons/star-delivery.svg" alt="star-delivery" />
+                <p>Вы оставляете заявку через сайт или по телефону</p>
+              </li>
+              <li class="flex gap-4">
+                <img src="/images/icons/star-delivery.svg" alt="star-delivery" />
+                <p>Мы производим точный расчет стоимости</p>
+              </li>
+              <li class="flex gap-4">
+                <img src="/images/icons/star-delivery.svg" alt="star-delivery" />
+                <p>Осуществляем поставку заказанного вами материала точно в срок</p>
+              </li>
+              <li class="flex gap-4">
+                <img src="/images/icons/star-delivery.svg" alt="star-delivery" />
+                <p>Соблюдаем своевременный документооборот</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="flex gap-4 rubik font-normal">
+            <div class="flex flex-col p-13 text-center bg-[#F8F8F8] gap-3">
+              <span>г. Санкт-Петербург,</span>
+              <span class="text-base text-[#848692]">Невский проспект, д. 12/2</span>
             </div>
 
-          </form>
-          <div class="w-[318px] bg-[#27AE60] h-[57px]"></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="flex flex-col max-w-[1920px] w-full items-end">
-    <div class="flex max-w-[1670px] w-full rubik">
-      <div class="flex max-w-[670px] w-full flex-col justify-between gap-25">
-        <div class="flex  flex-col gap-12 ">
-          <h3 class="text-5xl/[50px] tracking-tight font-medium mt-10">Доставка</h3>
-          <p class="max-w-[500px] text-lg font-normal">Основная миссия компании Спец-транс —
-            комплексные поставки нерудных материалов для
-            корпоративных клиентов и частных лиц. Мы осуществлем доставку по Санкт-Петербургу и
-            Ленинградской области.
-          </p>
-
-          <ul class="flex flex-col gap-12 text-[#67675F]">
-            <li class="flex gap-4">
-              <img src="/images/icons/star-delivery.svg" alt="star-delivery">
-              <p>Вы оставляете заявку через сайт или по телефону</p>
-            </li>
-            <li class="flex gap-4">
-              <img src="/images/icons/star-delivery.svg" alt="star-delivery">
-              <p>Мы производим точный расчет стоимости</p>
-            </li>
-            <li class="flex gap-4">
-              <img src="/images/icons/star-delivery.svg" alt="star-delivery">
-              <p>Осуществляем поставку заказанного вами материала точно в срок</p>
-            </li>
-            <li class="flex gap-4">
-              <img src="/images/icons/star-delivery.svg" alt="star-delivery">
-              <p>Соблюдаем своевременный документооборот</p>
-            </li>
-          </ul>
-        </div>
-
-
-        <div class="flex gap-4 rubik font-normal">
-          <div class="flex flex-col p-13  text-center bg-[#F8F8F8] gap-3">
-            <span>г. Санкт-Петербург,</span>
-            <span class="text-base text-[#848692]">Невский проспект, д. 12/2</span>
+            <div class="flex flex-col px-11 py-13 text-center bg-[#F8F8F8] gap-3">
+              <span>+7 812 545 44 53</span>
+              <span class="text-base text-[#848692]">Ежедневно с 08:00 до 24:00</span>
+            </div>
           </div>
+        </div>
 
-          <div class="flex flex-col px-11 py-13 text-center bg-[#F8F8F8] gap-3">
-            <span>+7 812 545 44 53</span>
-            <span class="text-base text-[#848692]">Ежедневно с 08:00 до 24:00</span>
-          </div>
-
+        <div class="w-full wax-h-[980px]">
+          <iframe
+            src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac15fcd3e256eec8e027b6c9698d1b1c0ef7c6b350fb078d5ecfe93d3f4e39d78&amp;source=constructor"
+            width="100%"
+            height="100%"
+          ></iframe>
         </div>
       </div>
+    </section>
 
-      <div class="w-full wax-h-[980px]">
-        <iframe
-          src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac15fcd3e256eec8e027b6c9698d1b1c0ef7c6b350fb078d5ecfe93d3f4e39d78&amp;source=constructor"
-          width="100%" height="100%"></iframe>
-      </div>
-
-    </div>
-
-  </section>
-
-  <FooterComponent/>
-
+    <FooterComponent />
+  </div>
 </template>
 
 <style scoped>
 .home-view {
   background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.3)),
-  url('/images/mainImg.png');
+    url('/images/mainImg.png');
   background-size: cover; /* Масштабирует изображение, чтобы оно покрывало весь фон */
   background-position: center; /* Центрирует изображение */
   background-repeat: no-repeat; /* Предотвращает повторение изображения */

@@ -1,8 +1,8 @@
 <script setup></script>
 
 <template>
-  <div class="flex justify-between w-full items-center gap-x-25 h-[100px]">
-    <div>
+  <div class="flex justify-between w-full items-center gap-x-25 h-[100px] px-3">
+    <div class="min-w-[200px]">
       <img src="/images/logo.svg" alt="logo" />
     </div>
 

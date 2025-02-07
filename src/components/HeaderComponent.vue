@@ -1,25 +1,25 @@
-<script setup></script>
+<script setup>
+import OrderCallBtn from '@/components/OrderCallBtn.vue'
+</script>
 
 <template>
-  <div class="flex justify-between w-full items-center gap-x-25 h-[100px] px-3">
-    <div class="min-w-[200px]">
+  <header class="flex justify-between w-full items-center gap-x-25 h-[100px]">
+    <router-link to="/" class="min-w-[200px] cursor-pointer">
       <img src="/images/logo.svg" alt="logo" />
-    </div>
+    </router-link>
 
     <nav>
       <ul class="flex gap-x-10 rubik">
         <li>Услуги</li>
-        <li>Материалы</li>
+        <router-link to="/materials">Материалы</router-link>
         <li>Доставка и оплата</li>
         <li>О компании</li>
         <li>Контакты</li>
       </ul>
     </nav>
 
-    <div class="flex justify-end rubik">
-      <button class="py-2 px-7 bg-[#27AE60] rounded-md text-white">Заказать звонок</button>
-    </div>
-  </div>
+    <OrderCallBtn />
+  </header>
 </template>
 
 <style scoped>

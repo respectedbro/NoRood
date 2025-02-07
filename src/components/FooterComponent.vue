@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <div class="w-full bg-[#424141] mt-16">
+  <footer class="w-full bg-[#424141]">
     <div class="flex w-full justify-center mx-auto">
       <div class="flex justify-between w-full items-center gap-x-25 h-[128px] px-3 max-w-[1420px]">
         <div class="flex items-center gap-10">
@@ -40,7 +40,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </footer>
 </template>
 
 <style scoped>

@@ -1,13 +1,15 @@
 <script setup>
 import HeaderComponent from '@/components/HeaderComponent.vue'
 import FooterComponent from '@/components/FooterComponent.vue'
+import OrderCallBtn from '@/components/OrderCallBtn.vue'
+import FormQuestion from '@/components/FormQuestion.vue'
 </script>
 
 <template>
   <div class="flex flex-col w-full items-center">
     <div class="home-view px-3">
       <div class="flex flex-col gap-90 max-w-[1420px] w-full justify-self-center">
-        <HeaderComponent />
+        <header-component />
 
         <section class="flex flex-col items-start max-w-3xl text-white gap-y-12">
           <h1 class="rubik text-6xl font-bold font-mono">Продажа и доставка нерудных материалов</h1>
@@ -18,9 +20,7 @@ import FooterComponent from '@/components/FooterComponent.vue'
             <p>нашей компании.</p>
           </div>
 
-          <button class="py-2 px-7 bg-[#27AE60] rounded-md text-white rubik">
-            Заказать звонок
-          </button>
+          <OrderCallBtn />
         </section>
       </div>
     </div>
@@ -117,50 +117,7 @@ import FooterComponent from '@/components/FooterComponent.vue'
     </section>
 
     <section class="bg-[#F8F8F8] flex flex-col items-center w-full px-3">
-      <div class="flex flex-col max-w-[1420px] w-full rubik">
-        <div class="flex justify-between items-center">
-          <div class="flex flex-col gap-6 max-w-[489px]">
-            <h3 class="text-5xl/[50px] tracking-tight font-medium">Остались вопросы?</h3>
-            <p class="text-[28px] text-[#27AE60] font-light">
-              Закажите обратный звонок и узнайте больше о наших услугах!
-            </p>
-            <p class="text-[22px] font-light">
-              Оставьте заявку и наш менеджер перезвонит вам в течении 10 минут
-            </p>
-            <button class="py-2 px-7 bg-[#27AE60] rounded-md text-white w-[254px] mt-8 rubik">
-              Заказать звонок
-            </button>
-          </div>
-
-          <div class="w-1/2 flex flex-col items-center">
-            <div class="w-[318px] bg-[#27AE60] h-[57px]"></div>
-            <form class="flex flex-col px-11 pt-11 pb-8 bg-white gap-2 w-full rounded-xl">
-              <input
-                class="border-solid border-1 border-slate-200 rounded py-6 pl-7"
-                type="text"
-                placeholder="Имя"
-                name="firstname"
-              />
-              <input
-                class="border-solid border-1 border-slate-200 rounded py-6 pl-7"
-                type="tel"
-                placeholder="Телефон"
-                name="phone"
-              />
-              <textarea
-                placeholder="Комментарии"
-                class="border-solid border-1 border-slate-200 rounded pt-6 pl-7 min-h-[172px]"
-                name="comment"
-              ></textarea>
-              <div class="flex gap-3 ml-1 mt-8">
-                <input type="checkbox" />
-                <span>Соглашение о персональных данных</span>
-              </div>
-            </form>
-            <div class="w-[318px] bg-[#27AE60] h-[57px]"></div>
-          </div>
-        </div>
-      </div>
+      <FormQuestion />
     </section>
 
     <section class="flex flex-col w-full items-end pl-3">
@@ -217,7 +174,7 @@ import FooterComponent from '@/components/FooterComponent.vue'
       </div>
     </section>
 
-    <FooterComponent />
+    <FooterComponent class="mt-16" />
   </div>
 </template>
 
@@ -250,9 +207,5 @@ import FooterComponent from '@/components/FooterComponent.vue'
 
 .technique {
   background-image: url('/images/materials/technique.jpeg');
-}
-
-.rubik {
-  font-family: Rubik, sans-serif;
 }
 </style>

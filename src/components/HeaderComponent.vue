@@ -11,7 +11,7 @@ import OrderCallBtn from '@/components/OrderCallBtn.vue'
     <nav>
       <ul class="flex gap-x-10 rubik">
         <li>Услуги</li>
-        <router-link to="/materials">Материалы</router-link>
+        <router-link to="/materials" exact-active-class="active">Материалы</router-link>
         <li>Доставка и оплата</li>
         <li>О компании</li>
         <li>Контакты</li>
@@ -25,5 +25,10 @@ import OrderCallBtn from '@/components/OrderCallBtn.vue'
 <style scoped>
 .rubik {
   font-family: Rubik, sans-serif;
+}
+
+.active {
+  font-weight: bold;
+  color: #27ae60; /* Пример стиля для активной ссылки */
 }
 </style>

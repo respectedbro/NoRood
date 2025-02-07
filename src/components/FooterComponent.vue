@@ -5,9 +5,9 @@
     <div class="flex w-full justify-center mx-auto">
       <div class="flex justify-between w-full items-center gap-x-25 h-[128px] px-3 max-w-[1420px]">
         <div class="flex items-center gap-10">
-          <div>
+          <router-link to="/">
             <img src="/images/logo-footer.svg" alt="logo-footer" />
-          </div>
+          </router-link>
 
           <div class="text-[#848692]">
             <p>Политика конфиденциальности © спец-транс, 2023</p>
@@ -16,7 +16,7 @@
 
         <div>
           <ul class="text-slate-300 flex gap-10">
-            <li>Материалы</li>
+            <router-link to="/materials">Материалы</router-link>
             <li>Услуги</li>
           </ul>
         </div>

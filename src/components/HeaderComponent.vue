@@ -10,10 +10,10 @@ import OrderCallBtn from '@/components/OrderCallBtn.vue'
 
     <nav>
       <ul class="flex gap-x-10 rubik">
-        <li>Услуги</li>
+        <router-link to="/services" exact-active-class="active">Услуги</router-link>
         <router-link to="/materials" exact-active-class="active">Материалы</router-link>
-        <li>Доставка и оплата</li>
-        <li>О компании</li>
+        <router-link to="/delivery" exact-active-class="active">Доставка и оплата</router-link>
+        <router-link to="/" exact-active-class="active">О компании</router-link>
         <li>Контакты</li>
       </ul>
     </nav>
@@ -29,6 +29,6 @@ import OrderCallBtn from '@/components/OrderCallBtn.vue'
 
 .active {
   font-weight: bold;
-  color: #27ae60; /* Пример стиля для активной ссылки */
+  color: #27ae60;
 }
 </style>

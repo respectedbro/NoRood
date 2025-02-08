@@ -3,7 +3,7 @@ import HeaderComponent from '@/components/HeaderComponent.vue'
 import FormQuestion from '@/components/FormQuestion.vue'
 import FooterComponent from '@/components/FooterComponent.vue'
 
-import { ref } from 'vue'
+import {ref} from 'vue'
 
 const activeTab = ref('sand')
 
@@ -14,7 +14,7 @@ const setActiveTab = (tab) => {
 
 <template>
   <div class="flex flex-col max-w-[1420px] w-full rubik">
-    <header-component />
+    <header-component/>
 
     <ul class="flex justify-around mt-12 text-center">
       <li
@@ -48,7 +48,7 @@ const setActiveTab = (tab) => {
 
     <div class="mt-24 flex flex-col gap-20 mb-48">
       <div v-if="activeTab === 'sand'" class="flex gap-10">
-        <img class="h-[480px]" src="/images/materials/sand-materials-view.jpeg" alt="sand" />
+        <img class="h-[480px]" src="/images/materials/sand-materials-view.jpeg" alt="sand"/>
         <div>
           <h3 class="text-3xl font-semibold mb-6">Песок</h3>
           <p class="mb-12 text-lg">
@@ -85,7 +85,7 @@ const setActiveTab = (tab) => {
         </div>
       </div>
       <div v-if="activeTab === 'gravel'" class="flex gap-10">
-        <img class="h-[480px]" src="/images/materials/ballast-materials-view.jpeg" alt="ballast" />
+        <img class="h-[480px]" src="/images/materials/ballast-materials-view.jpeg" alt="ballast"/>
         <div>
           <h3 class="text-3xl font-semibold mb-6">Песок</h3>
           <p class="mb-12 text-lg">
@@ -123,10 +123,15 @@ const setActiveTab = (tab) => {
         </div>
       </div>
       <div v-if="activeTab === 'asphalt'" class="flex gap-10 w-full">
-        <img class="h-[480px]" src="/images/materials/asphalt-materials-view.jpeg" alt="asphalt" />
+        <img class="h-[480px]" src="/images/materials/asphalt-materials-view.jpeg" alt="asphalt"/>
         <div class="w-full">
           <h3 class="text-3xl font-semibold mb-6">Вторичные материалы</h3>
-
+          <p class="mb-12 text-lg">Вторичные материалы, такие как асфальтная крошка, бой кирпича и бой бетона, играют
+            важную роль в устойчивом строительстве и экологии. Асфальтная крошка представляет собой
+            переработанный асфальт, который используется в производстве новых асфальтовых покрытий,
+            что позволяет сократить потребление новых материалов и уменьшить отходы. Бой кирпича и бой бетона, который образуется в
+            результате сноса конструкций, также находит применение в качестве заполнителя для новых
+            бетонных смесей, что позволяет снижать нагрузку на природные ресурсы.</p>
           <ul class="flex flex-col gap-4">
             <li class="flex">
               <p class="text-base font-light">Асфальтная крошка</p>
@@ -149,9 +154,9 @@ const setActiveTab = (tab) => {
     </div>
   </div>
   <section class="bg-[#F8F8F8] flex flex-col items-center w-full px-3">
-    <FormQuestion class="px-3" />
+    <FormQuestion class="px-3"/>
   </section>
-  <footer-component />
+  <footer-component/>
 </template>
 
 <style scoped>

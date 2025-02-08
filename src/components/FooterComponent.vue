@@ -17,7 +17,7 @@
         <div>
           <ul class="text-slate-300 flex gap-10">
             <router-link to="/materials">Материалы</router-link>
-            <li>Услуги</li>
+            <router-link to="/services">Услуги</router-link>
           </ul>
         </div>
 

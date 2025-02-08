@@ -33,7 +33,7 @@ import DeliveryComponent from "@/components/DeliveryComponent.vue";
         <li
           class="items-center flex gap-6 border-gray-300 border-1 border-solid rounded-md pr-12 pl-5 w-full h-18"
         >
-          <img src="/images/icons/time-work.svg" alt="" />
+          <img src="/images/icons/time-work.svg" alt="time-work" />
           <p>Мы работаем с <span class="text-[#27AE60]">2000</span> года</p>
         </li>
         <li
@@ -45,45 +45,45 @@ import DeliveryComponent from "@/components/DeliveryComponent.vue";
         <li
           class="items-center flex gap-6 border-gray-300 border-1 border-solid rounded-md pr-12 pl-5 p-6 w-full h-18"
         >
-          <img src="/images/icons/circle-clients.svg" alt="" />
+          <img src="/images/icons/circle-clients.svg" alt="circle-clients" />
           <p>Лучшие цены</p>
         </li>
         <li
           class="items-center flex gap-6 border-gray-300 border-1 border-solid rounded-md pr-12 pl-5 p-6 w-full h-18"
         >
-          <img src="/images/icons/star-products.svg" alt="" />
+          <img src="/images/icons/star-products.svg" alt="star-products" />
           <p>Качественная продукция</p>
         </li>
         <li
           class="items-center flex gap-6 border-gray-300 border-1 border-solid rounded-md pr-12 pl-5 p-6 w-full h-18"
         >
-          <img src="/images/icons/clock-operative.svg" alt="" />
+          <img src="/images/icons/clock-operative.svg" alt="clock-operative" />
           <p>Оперативность</p>
         </li>
       </ul>
 
       <h3 class="text-5xl/[50px] tracking-tight font-medium mt-20 mb-14">Основные материалы</h3>
       <div class="flex justify-between gap-1">
-        <div
+        <router-link to="/materials"
           class="text-white rubik text-4xl/[47px] font-bold cursor-pointer duration-500 ease-in-out transform hover:-translate-y-5"
         >
           <p class="sand w-[340px] h-[524px] flex items-end p-7">Песок</p>
-        </div>
-        <div
+        </router-link>
+        <router-link to="/materials"
           class="text-white rubik text-4xl/[47px] font-bold cursor-pointer duration-500 ease-in-out transform hover:-translate-y-5"
         >
           <p class="ballast w-[340px] h-[524px] flex items-end p-7">Щебень</p>
-        </div>
-        <div
+        </router-link>
+        <router-link to="/materials"
           class="text-white rubik text-4xl/[47px] font-bold cursor-pointer duration-500 ease-in-out transform hover:-translate-y-5"
         >
           <p class="asphalt w-[340px] h-[524px] flex items-end p-7">Асфальтная крошка</p>
-        </div>
-        <div
+        </router-link>
+        <router-link to="/services"
           class="text-white rubik text-4xl/[47px] font-bold cursor-pointer duration-500 ease-in-out transform hover:-translate-y-5"
         >
           <p class="technique w-[340px] h-[524px] flex items-end p-7">Аренда техники</p>
-        </div>
+        </router-link>
       </div>
     </section>
 

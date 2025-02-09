@@ -64,7 +64,7 @@ import DeliveryComponent from "@/components/DeliveryComponent.vue";
 
       <h3 class="text-5xl/[50px] tracking-tight font-medium mt-20 mb-14">Основные материалы</h3>
       <div class="flex justify-between gap-1">
-        <router-link to="/materials"
+        <router-link  :to="{ path: '/materials', query: { tab: 'sand' } }"
           class="text-white rubik text-4xl/[47px] font-bold cursor-pointer duration-500 ease-in-out transform hover:-translate-y-5"
         >
           <p class="sand w-[340px] h-[524px] flex items-end p-7">Песок</p>
@@ -74,7 +74,7 @@ import DeliveryComponent from "@/components/DeliveryComponent.vue";
         >
           <p class="ballast w-[340px] h-[524px] flex items-end p-7">Щебень</p>
         </router-link>
-        <router-link to="/materials"
+        <router-link :to="{ path: '/materials', query: { tab: 'gravel' } }"
           class="text-white rubik text-4xl/[47px] font-bold cursor-pointer duration-500 ease-in-out transform hover:-translate-y-5"
         >
           <p class="asphalt w-[340px] h-[524px] flex items-end p-7">Асфальтная крошка</p>
@@ -125,6 +125,45 @@ import DeliveryComponent from "@/components/DeliveryComponent.vue";
 
     <FooterComponent class="mt-16" />
   </div>
+
+  <div class="fixed top-0 bottom-0 right-0 left-0 w-full bg-slate-500/50 hidden">
+    <div class="fixed w-[700px] h-[400px] top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+
+      <form class="flex flex-col px-11 pt-11 pb-8 bg-white gap-2 w-full rounded-xl">
+        <h3 class="self-center text-xl pb-3">Заполните форму, мы с вами свяжемся в ближайшее время</h3>
+        <input
+          class="border-solid border-1 border-slate-200 rounded py-6 pl-7"
+          type="text"
+          placeholder="Имя"
+          name="firstname"
+          required
+        />
+        <input
+          class="border-solid border-1 border-slate-200 rounded py-6 pl-7"
+          type="tel"
+          placeholder="Телефон"
+          name="phone"
+          required
+        />
+        <textarea
+          placeholder="Комментарии"
+          class="border-solid border-1 border-slate-200 rounded pt-6 pl-7 min-h-[172px]"
+          name="comment"
+        ></textarea>
+        <div class="flex items-center justify-between p-3 ">
+          <div class="flex gap-3 ">
+            <input type="checkbox" />
+            <span>Соглашение о персональных данных</span>
+          </div>
+          <div>
+            <OrderCallBtn type="submit"/>
+          </div>
+
+        </div>
+      </form>
+    </div>
+  </div>
+
 </template>
 
 <style scoped>

@@ -3,13 +3,25 @@ import HeaderComponent from '@/components/HeaderComponent.vue'
 import FormQuestion from '@/components/FormQuestion.vue'
 import FooterComponent from '@/components/FooterComponent.vue'
 
-import {ref} from 'vue'
+import {ref, watch} from 'vue'
+import {useRoute} from "vue-router";
 
 const activeTab = ref('sand')
+const route = useRoute()
 
 const setActiveTab = (tab) => {
   activeTab.value = tab
 }
+
+watch(
+  () => route.query.tab,
+  (newTab) => {
+    if (newTab) {
+      setActiveTab(newTab)
+    }
+  },
+  { immediate: true }
+)
 </script>
 
 <template>
@@ -87,7 +99,7 @@ const setActiveTab = (tab) => {
       <div v-if="activeTab === 'gravel'" class="flex gap-10">
         <img class="h-[480px]" src="/images/materials/ballast-materials-view.jpeg" alt="ballast"/>
         <div>
-          <h3 class="text-3xl font-semibold mb-6">Песок</h3>
+          <h3 class="text-3xl font-semibold mb-6">Щебень</h3>
           <p class="mb-12 text-lg">
             Щебень размером 5-20 мм. Это самый востребованный в строительстве и производстве ЖБИ
             материал, его также применяют для строительства дорог и создания фундамента. Такой
@@ -162,8 +174,8 @@ const setActiveTab = (tab) => {
 <style scoped>
 .gr-list {
   position: relative;
-  overflow: hidden; /* Скрываем элементы, выходящие за пределы */
-  transition: color 0.3s ease; /* Плавный переход текста */
+  overflow: hidden;
+  transition: color 0.3s ease;
 }
 
 .gr-list::after {

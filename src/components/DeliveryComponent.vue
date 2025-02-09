@@ -1,10 +1,10 @@
 <script setup>
 import { ref } from 'vue';
 
-// Состояние для отображения прелоудера
+
 const isLoading = ref(true);
 
-// Функция для отключения прелоудера после загрузки карты
+
 const onIframeLoad = () => {
   isLoading.value = false;
 };
@@ -56,7 +56,7 @@ const onIframeLoad = () => {
       </div>
 
       <div class="relative w-full wax-h-[980px]">
-        <!-- Прелоудер -->
+
         <div
           v-if="isLoading"
           class="absolute inset-0 flex items-center justify-center bg-white z-10"
@@ -64,7 +64,6 @@ const onIframeLoad = () => {
           <div class="loader"></div>
         </div>
 
-        <!-- Карта -->
         <iframe
           src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac15fcd3e256eec8e027b6c9698d1b1c0ef7c6b350fb078d5ecfe93d3f4e39d78&amp;source=constructor"
           width="100%"
@@ -77,10 +76,10 @@ const onIframeLoad = () => {
 </template>
 
 <style scoped>
-/* Стили для прелоудера */
+
 .loader {
   border: 5px solid #f3f3f3;
-  border-top: 5px solid #3498db;
+  border-top: 5px solid #27AE60;
   border-radius: 50%;
   width: 50px;
   height: 50px;

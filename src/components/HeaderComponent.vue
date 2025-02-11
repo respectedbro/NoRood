@@ -1,5 +1,11 @@
 <script setup>
 import OrderCallBtn from '@/components/OrderCallBtn.vue'
+
+const emit = defineEmits(['open-modal'])
+
+const openModal = () => {
+  emit('open-modal')
+}
 </script>
 
 <template>
@@ -18,7 +24,7 @@ import OrderCallBtn from '@/components/OrderCallBtn.vue'
       </ul>
     </nav>
 
-    <OrderCallBtn class="hidden lg:block" />
+    <OrderCallBtn @click="openModal" class="hidden lg:block" />
   </header>
 </template>
 

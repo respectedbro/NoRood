@@ -1,15 +1,17 @@
 <script setup></script>
 
 <template>
-  <footer class="w-full bg-[#424141]">
+  <footer class="w-full bg-[#424141] pt-2">
     <div class="flex w-full justify-center mx-auto">
-      <div class="flex justify-between w-full items-center gap-x-25 h-[128px] px-3 max-w-[1420px]">
+      <div
+        class="flex justify-between flex-wrap-reverse w-full items-center gap-x-25 px-3 max-w-[1420px]"
+      >
         <div class="flex items-center gap-10">
           <router-link to="/">
             <img src="/images/logo-footer.svg" alt="logo-footer" />
           </router-link>
 
-          <div class="text-[#848692]">
+          <div class="text-[#848692] text-xs md:text-lg">
             <p>Политика конфиденциальности © спец-транс, 2023</p>
           </div>
         </div>

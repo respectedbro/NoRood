@@ -5,6 +5,7 @@ import OrderCallBtn from '@/components/OrderCallBtn.vue'
 import FormQuestion from '@/components/FormQuestion.vue'
 import DeliveryComponent from '@/components/DeliveryComponent.vue'
 import { ref } from 'vue'
+import ModalComponent from '@/components/ModalComponent.vue'
 
 const isModalOpen = ref(false)
 
@@ -21,7 +22,7 @@ const closeModal = () => {
   <div class="flex flex-col w-full items-center">
     <div class="home-view px-3">
       <div class="flex flex-col gap-10 md:gap-90 max-w-[1420px] w-full justify-self-center">
-        <header-component />
+        <header-component :isModalOpen="isModalOpen" @open-modal="openModal" />
 
         <section class="flex flex-col items-start max-w-3xl text-white gap-y-12">
           <h1 class="rubik text-3xl md:text-6xl font-bold font-mono">
@@ -118,11 +119,15 @@ const closeModal = () => {
       </div>
     </section>
 
-    <section class="flex flex-col max-w-[1420px] w-full rubik px-3">
-      <div class="flex justify-between items-center">
-        <div class="w-1/2 flex-col flex gap-8">
-          <h3 class="text-5xl/[50px] tracking-tight font-medium">О компании СПЕЦ-ТРАНС</h3>
-          <p class="max-w-[579px] text-lg font-normal text-[#67675F]">
+    <section
+      class="flex flex-col items-center text-center sm:text-start md:items-stretch max-w-[1420px] w-full rubik px-3"
+    >
+      <div class="flex flex-col mt-10 md:mt-0 md:flex-row justify-between items-center">
+        <div class="md:w-1/2 flex-col flex gap-8 w-full mb-6 md:mb-0">
+          <h3 class="text-2xl md:text-5xl/[50px] tracking-tight font-medium">
+            О компании СПЕЦ-ТРАНС
+          </h3>
+          <p class="max-w-[579px] text-sm md:text-lg font-normal text-[#67675F]">
             Наша фирма существует уже многие годы, заработав репутацию на рынке предлагаемых услуг
             как надежного и ответственного партнера. В число наших клиентов вошли крупнейшие
             организации. При этом стоит отметить, что на индивидуальный подход при заказе наших
@@ -131,25 +136,29 @@ const closeModal = () => {
         </div>
 
         <div
-          class="flex justify-center items-center mb-20 pt-28 pb-36 pr-16 pl-20 w-1/2 mt-20 rounded-xl bg-[#F8F8F8]"
+          class="w-[335px] flex-col gap-4 md:flex-row flex justify-start md:justify-center items-center mb-20 pt-10 md:pt-28 md:pb-36 pb-13 pr-8 md:pr-16 pl-10 md:pl-20 md:w-1/2 md:mt-20 rounded-xl bg-[#F8F8F8]"
         >
           <div class="w-1/2 flex flex-col items-center">
-            <div class="text-[88px] font-light relative">
-              <img src="/images/icons/+.svg" alt="plus" class="absolute top-8 left-30" />
+            <div class="text-5xl lg:text-[88px] font-semibold lg:font-light relative">
+              <img src="/images/icons/+.svg" alt="plus" class="absolute top-0 left-17 lg:left-28" />
               60
             </div>
-            <p class="text-2xl font-normal text-slate-500 pl-6">Единиц техники</p>
+            <p
+              class="whitespace-nowrap text-center text-lg lg:text-2xl font-normal text-slate-500 lg:pl-6"
+            >
+              Единиц техники
+            </p>
           </div>
           <div class="w-1/2 flex flex-col items-center">
-            <div class="text-[88px] font-light">15</div>
-            <p class="text-2xl font-normal text-slate-500">Карьеров</p>
+            <div class="text-5xl lg:text-[88px] font-semibold lg:font-light">15</div>
+            <p class="text-lg lg:text-2xl font-normal text-slate-500">Карьеров</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="bg-[#F8F8F8] flex flex-col items-center w-full px-3">
-      <FormQuestion />
+    <section class="bg-[#F8F8F8] flex flex-col items-center w-full pb-6 lg:pb-0 px-3">
+      <FormQuestion @open-modal="openModal" />
     </section>
 
     <DeliveryComponent />
@@ -157,48 +166,7 @@ const closeModal = () => {
     <FooterComponent class="mt-16" />
   </div>
 
-  <div v-if="isModalOpen" class="fixed top-0 bottom-0 right-0 left-0 w-full bg-slate-500/50">
-    <div
-      class="fixed w-[700px] h-[400px] top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-    >
-      <button class="absolute top-3 right-4 text-xl text-black cursor-pointer" @click="closeModal">
-        &#x2715;
-      </button>
-      <form class="flex flex-col px-11 pt-11 pb-8 bg-white gap-2 w-full rounded-xl">
-        <h3 class="self-center text-xl pb-3">
-          Заполните форму, мы с вами свяжемся в ближайшее время
-        </h3>
-        <input
-          class="border-solid border-1 border-slate-200 rounded py-6 pl-7"
-          type="text"
-          placeholder="Имя"
-          name="firstname"
-          required
-        />
-        <input
-          class="border-solid border-1 border-slate-200 rounded py-6 pl-7"
-          type="tel"
-          placeholder="Телефон"
-          name="phone"
-          required
-        />
-        <textarea
-          placeholder="Комментарии"
-          class="border-solid border-1 border-slate-200 rounded pt-6 pl-7 min-h-[172px]"
-          name="comment"
-        ></textarea>
-        <div class="flex items-center justify-between p-3">
-          <div class="flex gap-3">
-            <input type="checkbox" />
-            <span>Соглашение о персональных данных</span>
-          </div>
-          <div>
-            <OrderCallBtn type="submit" />
-          </div>
-        </div>
-      </form>
-    </div>
-  </div>
+  <ModalComponent :is-modal-open="isModalOpen" @close-modal="closeModal" />
 </template>
 
 <style scoped>

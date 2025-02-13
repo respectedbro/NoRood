@@ -14,7 +14,7 @@ const onIframeLoad = () => {
       class="flex flex-col items-center lg:items-start lg:flex-row max-w-[1440px] lg:max-w-[1670px] w-full rubik"
     >
       <div class="flex max-w-[670px] w-full flex-col justify-between gap-12 md:gap-25">
-        <div class="flex flex-col gap-12">
+        <div class="flex flex-col items-center gap-12">
           <h3 class="text-3xl md:text-5xl/[50px] tracking-tight font-medium mt-10">Доставка</h3>
           <p class="max-w-[500px] text-sm md:text-lg font-normal md:font-normal">
             Основная миссия компании Спец-транс — комплексные поставки нерудных материалов для

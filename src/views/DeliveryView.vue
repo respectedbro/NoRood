@@ -6,7 +6,7 @@ import FooterComponent from "@/components/FooterComponent.vue";
 </script>
 
 <template>
-  <div class="flex flex-col max-w-[1420px] w-full rubik">
+  <div class="flex flex-col max-w-[1420px] w-full rubik px-3">
     <HeaderComponent/>
     </div>
   <section class="flex flex-col w-full items-end pl-3">

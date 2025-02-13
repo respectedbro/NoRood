@@ -5,11 +5,11 @@ import FormQuestion from '@/components/FormQuestion.vue'
 </script>
 
 <template>
-  <div class="flex flex-col max-w-[1420px] w-full rubik">
+  <div class="flex flex-col max-w-[1420px] w-full rubik px-3">
     <header-component />
 
-    <div class="mt-24 flex flex-col gap-20 mb-8">
-      <div class="flex gap-10">
+    <div class="mt-8 lg:mt-24 flex flex-col gap-20 mb-8">
+      <div class="flex flex-col-reverse lg:flex-row gap-10 ">
         <img src="/images/services/special-equipment.jpeg" alt="special-equipment" />
         <div>
           <h3 class="text-3xl font-semibold mb-6">Аренда спецтехники</h3>
@@ -45,7 +45,7 @@ import FormQuestion from '@/components/FormQuestion.vue'
         </div>
       </div>
 
-      <div class="flex gap-10">
+      <div class="flex flex-col-reverse lg:flex-row gap-10">
         <img src="/images/services/tippers.svg" alt="special-equipment" />
         <div>
           <h3 class="text-3xl font-semibold mb-6">Аренда самосвалов</h3>

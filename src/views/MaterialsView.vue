@@ -25,10 +25,10 @@ watch(
 </script>
 
 <template>
-  <div class="flex flex-col max-w-[1420px] w-full rubik">
+  <div class="flex flex-col max-w-[1420px] w-full rubik px-3">
     <header-component/>
 
-    <ul class="flex justify-around mt-12 text-center">
+    <ul class="flex flex-col sm:flex-row gap-3 items-center  justify-around lg:mt-12 text-center">
       <li
         @click="setActiveTab('sand')"
         :class="{
@@ -58,12 +58,12 @@ watch(
       </li>
     </ul>
 
-    <div class="mt-24 flex flex-col gap-20 mb-48">
-      <div v-if="activeTab === 'sand'" class="flex gap-10">
-        <img class="h-[480px]" src="/images/materials/sand-materials-view.jpeg" alt="sand"/>
+    <div class=" mt-6 lg:mt-24 flex flex-col gap-20 mb-20 lg:mb-48">
+      <div v-if="activeTab === 'sand'" class="flex flex-col lg:flex-row gap-10">
+        <img class="max-h-[280px] sm:max-h-[380px] md:max-h-[480px]" src="/images/materials/sand-materials-view.jpeg" alt="sand"/>
         <div>
-          <h3 class="text-3xl font-semibold mb-6">Песок</h3>
-          <p class="mb-12 text-lg">
+          <h3 class="text-2xl lg:text-3xl font-semibold mb-6">Песок</h3>
+          <p class="mb-12 text-sm lg:text-lg">
             Зернистость песка влияет на водопотребность раствора и его прочностные характеристики –
             чем больше модуль крупности, тем выше прочность бетона и меньше расход воды для его
             приготовления.Увеличение зернистости свидетельствует о большем среднем диаметре частиц
@@ -96,11 +96,11 @@ watch(
           </ul>
         </div>
       </div>
-      <div v-if="activeTab === 'gravel'" class="flex gap-10">
-        <img class="h-[480px]" src="/images/materials/ballast-materials-view.jpeg" alt="ballast"/>
+      <div v-if="activeTab === 'gravel'" class="flex flex-col lg:flex-row gap-10">
+        <img class="max-h-[280px] sm:max-h-[380px] md:max-h-[480px]" src="/images/materials/ballast-materials-view.jpeg" alt="ballast"/>
         <div>
           <h3 class="text-3xl font-semibold mb-6">Щебень</h3>
-          <p class="mb-12 text-lg">
+          <p class="mb-12 text-sm lg:text-lg">
             Щебень размером 5-20 мм. Это самый востребованный в строительстве и производстве ЖБИ
             материал, его также применяют для строительства дорог и создания фундамента. Такой
             щебень незаменим и в частном строительстве при подготовке бетона. Щебень 20-40 мм.
@@ -134,11 +134,11 @@ watch(
           </ul>
         </div>
       </div>
-      <div v-if="activeTab === 'asphalt'" class="flex gap-10 w-full">
-        <img class="h-[480px]" src="/images/materials/asphalt-materials-view.jpeg" alt="asphalt"/>
+      <div v-if="activeTab === 'asphalt'" class="flex flex-col lg:flex-row gap-10">
+        <img class="max-h-[280px] sm:max-h-[380px] md:max-h-[480px]" src="/images/materials/asphalt-materials-view.jpeg" alt="asphalt"/>
         <div class="w-full">
           <h3 class="text-3xl font-semibold mb-6">Вторичные материалы</h3>
-          <p class="mb-12 text-lg">Вторичные материалы, такие как асфальтная крошка, бой кирпича и бой бетона, играют
+          <p class="mb-12 text-sm lg:text-lg">Вторичные материалы, такие как асфальтная крошка, бой кирпича и бой бетона, играют
             важную роль в устойчивом строительстве и экологии. Асфальтная крошка представляет собой
             переработанный асфальт, который используется в производстве новых асфальтовых покрытий,
             что позволяет сократить потребление новых материалов и уменьшить отходы. Бой кирпича и бой бетона, который образуется в

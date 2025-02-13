@@ -50,7 +50,7 @@ const openModal = () => {
           ></textarea>
           <div class="flex gap-3 ml-1 mt-8">
             <input type="checkbox" />
-            <span class="whitespace-nowrap">Соглашение о персональных данных</span>
+            <span >Соглашение о персональных данных</span>
           </div>
           <button type="submit" class="max-w-30 mt-4 bg-[#27AE60] text-white rounded py-2 px-4">
             Отправить

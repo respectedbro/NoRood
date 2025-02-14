@@ -1,13 +1,11 @@
 <script setup>
 import OrderCallBtn from '@/components/OrderCallBtn.vue'
 import { ref } from 'vue'
+import { useModalStore } from '@/store/root.js'
 
-const emit = defineEmits(['open-modal'])
+const modalStore = useModalStore()
+
 const isMenuOpen = ref(false)
-
-const openModal = () => {
-  emit('open-modal')
-}
 
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value
@@ -22,14 +20,11 @@ const closeMenu = () => {
   <header
     class="flex justify-between w-full items-center lg:gap-x-7 xl:gap-x-25 md:h-[100px] relative"
   >
-    <!-- Логотип -->
     <router-link to="/" class="min-w-[200px] cursor-pointer">
       <img src="/images/logo.svg" alt="logo" />
     </router-link>
 
-    <!-- Навигация -->
     <nav>
-      <!-- Десктопное меню -->
       <ul class="hidden lg:flex lg:gap-x-5 xl:gap-x-10 rubik">
         <router-link to="/services" exact-active-class="active">Услуги</router-link>
         <router-link to="/materials" exact-active-class="active">Материалы</router-link>
@@ -69,7 +64,7 @@ const closeMenu = () => {
           @click="
             () => {
               closeMenu()
-              openModal()
+              modalStore.openModal()
             }
           "
         />
@@ -79,11 +74,9 @@ const closeMenu = () => {
       </ul>
     </nav>
 
-    <!-- Бургер для мобильного меню -->
     <button class="lg:hidden text-3xl cursor-pointer" @click="toggleMenu">&#9776;</button>
 
-    <!-- Кнопка "Заказать звонок" для десктопа -->
-    <OrderCallBtn @click="openModal" class="hidden lg:block" />
+    <OrderCallBtn @click="modalStore.openModal" class="hidden lg:block" />
   </header>
 </template>
 

@@ -1,15 +1,8 @@
 <script setup>
 import OrderCallBtn from '@/components/OrderCallBtn.vue'
+import { useModalStore } from '@/store/root.js'
 
-const props = defineProps({
-  isModalOpen: Boolean,
-})
-
-const emit = defineEmits(['open-modal'])
-
-const openModal = () => {
-  emit('open-modal')
-}
+const modalStore = useModalStore()
 </script>
 
 <template>
@@ -23,7 +16,7 @@ const openModal = () => {
         <p class="text-base md:text-[22px] font-light">
           Оставьте заявку и наш менеджер перезвонит вам в течении 10 минут
         </p>
-        <OrderCallBtn @click="openModal" class="max-w-[254px] hidden lg:block" />
+        <OrderCallBtn @click="modalStore.openModal" class="max-w-[254px] hidden lg:block" />
       </div>
 
       <div class="w-full lg:w-1/2 flex flex-col items-center">
@@ -50,7 +43,7 @@ const openModal = () => {
           ></textarea>
           <div class="flex gap-3 ml-1 mt-8">
             <input type="checkbox" />
-            <span >Соглашение о персональных данных</span>
+            <span>Соглашение о персональных данных</span>
           </div>
           <button type="submit" class="max-w-30 mt-4 bg-[#27AE60] text-white rounded py-2 px-4">
             Отправить

@@ -4,25 +4,20 @@ import FooterComponent from '@/components/FooterComponent.vue'
 import OrderCallBtn from '@/components/OrderCallBtn.vue'
 import FormQuestion from '@/components/FormQuestion.vue'
 import DeliveryComponent from '@/components/DeliveryComponent.vue'
-import { ref } from 'vue'
 import ModalComponent from '@/components/ModalComponent.vue'
+import { useModalStore } from '@/store/root.js'
 
-const isModalOpen = ref(false)
-
-const openModal = () => {
-  isModalOpen.value = true
-}
-
-const closeModal = () => {
-  isModalOpen.value = false
-}
+const modalStore = useModalStore()
 </script>
 
 <template>
   <div class="flex flex-col w-full items-center">
     <div class="home-view px-3">
       <div class="flex flex-col gap-10 md:gap-90 max-w-[1420px] w-full justify-self-center">
-        <header-component :isModalOpen="isModalOpen" @open-modal="openModal" />
+        <header-component
+          :isModalOpen="modalStore.isModalOpen"
+          @open-modal="modalStore.openModal"
+        />
 
         <section class="flex flex-col items-start max-w-3xl text-white gap-y-12">
           <h1 class="rubik text-3xl md:text-6xl font-bold font-mono">
@@ -35,7 +30,7 @@ const closeModal = () => {
             <p>нашей компании.</p>
           </div>
 
-          <OrderCallBtn @click="openModal" class="mb-4 sm:mb-40" />
+          <OrderCallBtn @click="modalStore.openModal" class="mb-4 sm:mb-40" />
         </section>
       </div>
     </div>
@@ -158,7 +153,7 @@ const closeModal = () => {
     </section>
 
     <section class="bg-[#F8F8F8] flex flex-col items-center w-full pb-6 lg:pb-0 px-3">
-      <FormQuestion @open-modal="openModal" />
+      <FormQuestion @open-modal="modalStore.openModal" />
     </section>
 
     <DeliveryComponent />
@@ -166,7 +161,7 @@ const closeModal = () => {
     <FooterComponent class="mt-16" />
   </div>
 
-  <ModalComponent :is-modal-open="isModalOpen" @close-modal="closeModal" />
+  <ModalComponent :is-modal-open="modalStore.isModalOpen" @close-modal="modalStore.closeModal" />
 </template>
 
 <style scoped>

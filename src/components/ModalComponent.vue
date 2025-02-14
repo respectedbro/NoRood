@@ -1,27 +1,56 @@
 <script setup>
-import {defineEmits, defineProps} from 'vue'
-import {Form, Field} from 'vee-validate'
+import { defineEmits, defineProps } from 'vue'
+import { useField, useForm } from 'vee-validate'
+import { toTypedSchema } from '@vee-validate/zod'
+import { z } from 'zod'
 
-const {isModalOpen} = defineProps({
+// Пропсы
+const { isModalOpen } = defineProps({
   isModalOpen: Boolean,
 })
 
+// Эмиттеры
 const emit = defineEmits(['close-modal'])
-
 const closeModal = () => {
   emit('close-modal')
 }
 
-const sendForm = () => {
-  console.log('SEND')
-}
+// Схема валидации
+const validationSchema = toTypedSchema(
+  z.object({
+    firstname: z
+      .string()
+      .min(1, 'Обязательные поля') // Имя обязательно
+      .regex(/^[А-Яа-яЁё]+$/, { message: 'Имя должно содержать только русские буквы' }),
+    phone: z
+      .string()
+      .min(1, { message: 'Обязательные поля' }) // Телефон обязателен
+      .regex(/^\+?\d{11}$/, 'Телефон должен начинаться с "+" и содержать 11 цифр'),
+    agreement: z.boolean().refine((val) => val === true, {
+      message: 'Необходимо согласиться с обработкой персональных данных',
+    }),
+    comment: z
+      .string()
+      .max(500, 'Комментарий не может превышать 500 символов') // Комментарий не обязателен
+      .optional(), // Делаем поле необязательным
+  }),
+)
 
-const isRequired = (value) => {
-  if (value && value.trim()) {
-    return true
-  }
-  return 'This is required'
-}
+// Используем useForm
+const { handleSubmit, errors } = useForm({
+  validationSchema,
+})
+
+// Поля формы
+const { value: firstname } = useField('firstname')
+const { value: phone } = useField('phone')
+const { value: agreement } = useField('agreement')
+const { value: comment } = useField('comment')
+
+// Обработчик формы
+const sendForm = handleSubmit((values) => {
+  alert(JSON.stringify(values, null, 2))
+})
 </script>
 
 <template>
@@ -29,46 +58,64 @@ const isRequired = (value) => {
     <div
       class="fixed w-full sm:w-[700px] sm:h-[400px] px-3 lg:top-1/3 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
     >
-      <button @click="closeModal"
-              class="p-2 absolute top-3 right-4 text-xl text-black cursor-pointer">
+      <button
+        @click="closeModal"
+        class="p-2 absolute top-3 right-4 text-xl text-black cursor-pointer"
+      >
         &#x2715;
       </button>
-      <Form @submit="sendForm"
-            class="flex flex-col px-11 pt-11 pb-8 bg-white gap-2 w-full rounded-xl">
+      <form
+        @submit.prevent="sendForm"
+        class="flex flex-col px-11 pt-11 pb-8 bg-white gap-2 w-full rounded-xl"
+      >
         <h3 class="self-center text-center text-sm lg:text-xl pb-3">
           Заполните форму, мы с вами свяжемся в ближайшее время
         </h3>
-        <Field :rules="isRequired"
+
+        <!-- Поле Имя -->
+        <input
+          v-model="firstname"
           class="border-solid border-1 border-slate-200 rounded py-3 lg:py-6 pl-3 lg:pl-7"
           type="text"
           placeholder="Имя"
           name="firstname"
-          required
         />
-        <Field
+        <span class="text-red-500 text-sm">{{ errors.firstname }}</span>
+
+        <!-- Поле Телефон -->
+        <input
+          v-model="phone"
           class="border-solid border-1 border-slate-200 rounded py-3 lg:py-6 pl-3 lg:pl-7"
           type="tel"
           placeholder="Телефон"
           name="phone"
-          required
         />
-        <Field
+        <span class="text-red-500 text-sm">{{ errors.phone }}</span>
+
+        <!-- Поле Комментарий -->
+        <textarea
+          v-model="comment"
           placeholder="Комментарии"
-          class="border-solid border-1 border-slate-200 rounded py-3 lg:py-6 pl-3 lg:pl-7 min-h-[172px]"
+          maxlength="500"
+          class="border-solid border-1 border-slate-200 rounded py-3 lg:py-6 pl-3 lg:pl-7 min-h-[100px] resize-none overflow-hidden"
           name="comment"
-        ></Field>
-        <div class="flex flex-col md:flex-row items-start sm:items-center justify-between p-3">
-          <div class="flex gap-3">
-            <input type="checkbox"/>
-            <span class="text-sm">Соглашение о персональных данных</span>
-          </div>
-          <div>
-            <button type="submit" class=" max-w-30 mt-4 bg-[#27AE60] text-white rounded py-2 px-4">
-              Отправить
-            </button>
-          </div>
+        ></textarea>
+        <span class="text-red-500 text-sm">{{ errors.comment }}</span>
+
+        <!-- Соглашение -->
+        <div class="flex gap-3 items-center">
+          <input type="checkbox" v-model="agreement" name="agreement" />
+          <span class="text-sm">Соглашение о персональных данных</span>
         </div>
-      </Form>
+        <span class="text-red-500 text-sm">{{ errors.agreement }}</span>
+
+        <!-- Кнопка -->
+        <div>
+          <button type="submit" class="max-w-30 mt-4 bg-[#27AE60] text-white rounded py-2 px-4">
+            Отправить
+          </button>
+        </div>
+      </form>
     </div>
   </div>
 </template>
